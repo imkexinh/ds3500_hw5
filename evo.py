@@ -51,11 +51,11 @@ class Evo:
         self.pop = {k: self.pop[k] for k in nds}
 
     @profile
-    def evolve(self, n=1, dom=100, status=1000, time_limit=300):
+    def evolve(self, dom=100, status=1000, time_limit=300):
         agent_names = list(self.agents.keys())
         start_time = time.time()
         i = 0
-        while time.time() - start_time < time_limit and i < n:
+        while time.time() - start_time < time_limit:
             pick = rnd.choice(agent_names)
             self.run_agent(pick)
             if i % dom == 0:
