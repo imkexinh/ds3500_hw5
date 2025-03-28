@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.7, pytest-8.3.4, pluggy-1.5.0 -- /opt/anaconda3/bin/python3.12
+cachedir: .pytest_cache
+rootdir: /Users/hydec5even/Desktop/DS3500/PL
+plugins: anyio-4.6.2
+collecting ... collected 5 items
+
+test_assignta.py::test_overallocation PASSED                             [ 20%]
+test_assignta.py::test_conflicts PASSED                                  [ 40%]
+test_assignta.py::test_undersupport PASSED                               [ 60%]
+test_assignta.py::test_unavailable PASSED                                [ 80%]
+test_assignta.py::test_unpreferred PASSED                                [100%]
+
+=============================== warnings summary ===============================
+assignta.py:10
+  /Users/hydec5even/Desktop/DS3500/PL/assignta.py:10: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+    ta_prefs = tas.iloc[:, 3:].replace({'U': 0, 'W': 1, 'P': 2}).values
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 5 passed, 1 warning in 0.82s =========================
