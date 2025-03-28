@@ -94,7 +94,7 @@ def main():
     for _ in range(10):
         evo.add_solution(random_solution([]))
 
-    evo.evolve(n=10000, time_limit=300)
+    evo.evolve(n=10000000, time_limit=300)
 
     summary = evo.summarize('KELH')
     with open('KELH_summary.csv', 'w') as f:
